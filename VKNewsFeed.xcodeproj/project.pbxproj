@@ -3,17 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		84847BF7265D83C000F240AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847BF6265D83C000F240AA /* AppDelegate.swift */; };
 		84847BF9265D83C000F240AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847BF8265D83C000F240AA /* SceneDelegate.swift */; };
-		84847BFB265D83C000F240AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847BFA265D83C000F240AA /* ViewController.swift */; };
-		84847BFE265D83C000F240AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84847BFC265D83C000F240AA /* Main.storyboard */; };
+		84847BFB265D83C000F240AA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847BFA265D83C000F240AA /* AuthViewController.swift */; };
 		84847C00265D83C100F240AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84847BFF265D83C100F240AA /* Assets.xcassets */; };
 		84847C03265D83C100F240AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84847C01265D83C100F240AA /* LaunchScreen.storyboard */; };
 		84847C0B265D83E100F240AA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 84847C0A265D83E100F240AA /* .gitignore */; };
+		84847C0D265D947C00F240AA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847C0C265D947C00F240AA /* AuthService.swift */; };
+		84847C10265D96DF00F240AA /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84847C0F265D96DF00F240AA /* AuthViewController.storyboard */; };
+		84C6A3CE265DA8570025F860 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6A3CD265DA8570025F860 /* FeedViewController.swift */; };
+		84C6A3D0265DA8690025F860 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A3CF265DA8690025F860 /* FeedViewController.storyboard */; };
 		9D4E525423D9159F55295F67 /* Pods_VKNewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBF9DFD6CBED623AA2F891 /* Pods_VKNewsFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +25,15 @@
 		84847BF3265D83C000F240AA /* VKNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84847BF6265D83C000F240AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84847BF8265D83C000F240AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84847BFA265D83C000F240AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84847BFD265D83C000F240AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84847BFA265D83C000F240AA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		84847BFF265D83C100F240AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84847C02265D83C100F240AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84847C04265D83C100F240AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84847C0A265D83E100F240AA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		84847C0C265D947C00F240AA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		84847C0F265D96DF00F240AA /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		84C6A3CD265DA8570025F860 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		84C6A3CF265DA8690025F860 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		A6CBF9DFD6CBED623AA2F891 /* Pods_VKNewsFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKNewsFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DF18CC9C99B4E3C83B87A5 /* Pods-VKNewsFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKNewsFeed.release.xcconfig"; path = "Target Support Files/Pods-VKNewsFeed/Pods-VKNewsFeed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +64,6 @@
 				5A565161F57F8669C3270496 /* Pods-VKNewsFeed.debug.xcconfig */,
 				F0DF18CC9C99B4E3C83B87A5 /* Pods-VKNewsFeed.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,14 +90,41 @@
 			children = (
 				84847BF6265D83C000F240AA /* AppDelegate.swift */,
 				84847BF8265D83C000F240AA /* SceneDelegate.swift */,
-				84847BFA265D83C000F240AA /* ViewController.swift */,
-				84847BFC265D83C000F240AA /* Main.storyboard */,
+				84C6A3D2265DA9630025F860 /* Authentication */,
+				84C6A3D1265DA9210025F860 /* FeedViewController */,
+				84847C0E265D948900F240AA /* Services */,
 				84847BFF265D83C100F240AA /* Assets.xcassets */,
 				84847C01265D83C100F240AA /* LaunchScreen.storyboard */,
 				84847C0A265D83E100F240AA /* .gitignore */,
 				84847C04265D83C100F240AA /* Info.plist */,
 			);
 			path = VKNewsFeed;
+			sourceTree = "<group>";
+		};
+		84847C0E265D948900F240AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84847C0C265D947C00F240AA /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84C6A3D1265DA9210025F860 /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C6A3CD265DA8570025F860 /* FeedViewController.swift */,
+				84C6A3CF265DA8690025F860 /* FeedViewController.storyboard */,
+			);
+			path = FeedViewController;
+			sourceTree = "<group>";
+		};
+		84C6A3D2265DA9630025F860 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				84847BFA265D83C000F240AA /* AuthViewController.swift */,
+				84847C0F265D96DF00F240AA /* AuthViewController.storyboard */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84847C0B265D83E100F240AA /* .gitignore in Resources */,
+				84847C10265D96DF00F240AA /* AuthViewController.storyboard in Resources */,
 				84847C03265D83C100F240AA /* LaunchScreen.storyboard in Resources */,
+				84C6A3D0265DA8690025F860 /* FeedViewController.storyboard in Resources */,
 				84847C00265D83C100F240AA /* Assets.xcassets in Resources */,
-				84847BFE265D83C000F240AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,23 +243,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84847BFB265D83C000F240AA /* ViewController.swift in Sources */,
+				84847BFB265D83C000F240AA /* AuthViewController.swift in Sources */,
 				84847BF7265D83C000F240AA /* AppDelegate.swift in Sources */,
+				84C6A3CE265DA8570025F860 /* FeedViewController.swift in Sources */,
 				84847BF9265D83C000F240AA /* SceneDelegate.swift in Sources */,
+				84847C0D265D947C00F240AA /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84847BFC265D83C000F240AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84847BFD265D83C000F240AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84847C01265D83C100F240AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
