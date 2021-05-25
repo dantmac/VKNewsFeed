@@ -13,6 +13,7 @@
 		84847BFE265D83C000F240AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84847BFC265D83C000F240AA /* Main.storyboard */; };
 		84847C00265D83C100F240AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84847BFF265D83C100F240AA /* Assets.xcassets */; };
 		84847C03265D83C100F240AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84847C01265D83C100F240AA /* LaunchScreen.storyboard */; };
+		84847C0B265D83E100F240AA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 84847C0A265D83E100F240AA /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84847BFF265D83C100F240AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84847C02265D83C100F240AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84847C04265D83C100F240AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84847C0A265D83E100F240AA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				84847BFC265D83C000F240AA /* Main.storyboard */,
 				84847BFF265D83C100F240AA /* Assets.xcassets */,
 				84847C01265D83C100F240AA /* LaunchScreen.storyboard */,
+				84847C0A265D83E100F240AA /* .gitignore */,
 				84847C04265D83C100F240AA /* Info.plist */,
 			);
 			path = VKNewsFeed;
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84847C0B265D83E100F240AA /* .gitignore in Resources */,
 				84847C03265D83C100F240AA /* LaunchScreen.storyboard in Resources */,
 				84847C00265D83C100F240AA /* Assets.xcassets in Resources */,
 				84847BFE265D83C000F240AA /* Main.storyboard in Resources */,
