@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
