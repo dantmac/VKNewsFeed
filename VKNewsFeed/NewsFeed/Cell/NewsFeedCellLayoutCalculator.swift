@@ -79,10 +79,20 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
             if photoAttachments.count == 1 {
                 attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
             } else if photoAttachments.count > 1 {
-                attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+                
+                var photos = [CGSize]()
+                for photo in photoAttachments {
+                    let photoSize = CGSize(width: CGFloat(photo.width), height: CGFloat(photo.heigth))
+                    photos.append(photoSize)
+                }
+                
+                let rowHeight = RowLayout.rowHeightCounter(superviewWidth: cardViewWidth, photosArray: photos)
+                if let rowHeight = rowHeight {
+                    attachmentFrame.size = CGSize(width: cardViewWidth, height: rowHeight)
+                }
             }
         }
-            
+        
         // MARK: Work with bottomViewFrame
         
         let bottomViewTop = max(postLabelFrame.maxY, attachmentFrame.maxY)
@@ -100,6 +110,6 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
                      bottomViewFrame: bottomViewFrame,
                      totalHeigth: totalHeight)
     }
-
+    
 }
 
