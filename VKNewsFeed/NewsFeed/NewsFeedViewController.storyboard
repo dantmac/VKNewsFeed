@@ -16,8 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GJE-pS-hQ4">
+                            <view contentMode="scaleToFill" id="tkM-7S-ixY" customClass="GradientView" customModule="VKNewsFeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="adO-ml-v0L"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="1" green="0.83125853187996324" blue="0.42277605486765851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GJE-pS-hQ4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="cLX-u8-RSl"/>
@@ -26,12 +40,16 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="1" green="0.98042306832684278" blue="0.31557576885301653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="C4G-PG-KzN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GJE-pS-hQ4" secondAttribute="bottom" id="F6j-Gk-iAn"/>
                             <constraint firstItem="GJE-pS-hQ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Isf-YM-9n9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GJE-pS-hQ4" secondAttribute="trailing" id="caB-vp-Ge8"/>
-                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="daa-cu-BQ3"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="fFi-D8-Haf"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="gTl-pr-wle"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="omh-i0-vDf"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="wO1-7w-Q0F"/>
                         </constraints>
                     </view>
                     <connections>
