@@ -35,12 +35,19 @@ final class NewsFeedCodeCell: UITableViewCell {
         return view
     }()
     
-    let postLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = Constants.postLabelFont
-        label.textColor = #colorLiteral(red: 0.1725490196, green: 0.1764705882, blue: 0.1803921569, alpha: 1)
-        return label
+    let postLabel: UITextView = {
+       let textView = UITextView()
+        textView.font = Constants.postLabelFont
+        textView.isScrollEnabled = false
+        textView.isSelectable = true
+        textView.isUserInteractionEnabled = true
+        textView.isEditable = false
+        
+        let padding = textView.textContainer.lineFragmentPadding
+        textView.textContainerInset = UIEdgeInsets.init(top: 0, left: -padding, bottom: 0, right: -padding)
+        
+        textView.dataDetectorTypes = UIDataDetectorTypes.all
+        return textView
     }()
     
     let moreTextButton: UIButton =  {
@@ -57,7 +64,7 @@ final class NewsFeedCodeCell: UITableViewCell {
     
     let postImageView: WebImageView = {
         let imageView = WebImageView()
-        imageView.backgroundColor = #colorLiteral(red: 0.8901960784, green: 0.8980392157, blue: 0.9098039216, alpha: 1)
+        imageView.backgroundColor = #colorLiteral(red: 0.8669923816, green: 0.8645739554, blue: 0.9068178372, alpha: 1)
         return imageView
     }()
     
@@ -358,21 +365,6 @@ final class NewsFeedCodeCell: UITableViewCell {
         topView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -8).isActive = true
         topView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 8).isActive = true
         topView.heightAnchor.constraint(equalToConstant: Constants.topViewHeight).isActive = true
-        
-        // postLabel constraints
-        // not necessary, since the dimensions are set dynamically
-        
-        // moreTextButton constraints
-        // not necessary, since the dimensions are set dynamically
-        
-        // postImageView constraints
-        // not necessary, since the dimensions are set dynamically
-        
-        // galleryCollectionView constraints
-        // not necessary, since the dimensions are set dynamically
-        
-        // bottomView constraints
-        // not necessary, since the dimensions are set dynamically
     }
     
     private func overlayFirstLayer() {
