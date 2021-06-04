@@ -12,6 +12,16 @@ protocol DataFetcher {
     func getUser(response: @escaping (UserResponse?) -> Void)
 }
 
+private enum ConfigKeys {
+    static let userIdsKey = "user_ids"
+    static let fieldsKey = "fields"
+    static let photo100Key = "photo_100"
+    
+    static let filtersKey = "filters"
+    static let attachmentsKey = "post, photo"
+    static let nextBatchKey = "start_from"
+}
+
 struct NetworkDataFetcher: DataFetcher {
    
     private let authService: AuthService
@@ -24,7 +34,7 @@ struct NetworkDataFetcher: DataFetcher {
     
     func getUser(response: @escaping (UserResponse?) -> Void) {
         guard let userId = authService.userId else { return }
-        let params = ["user_ids": userId, "fields": "photo_100"]
+        let params = [ConfigKeys.userIdsKey: userId, ConfigKeys.fieldsKey: ConfigKeys.photo100Key]
         networking.request(path: API.user, params: params) { (data, error) in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
@@ -38,8 +48,8 @@ struct NetworkDataFetcher: DataFetcher {
     
     func getFeed(nextBatchFrom: String?, response: @escaping (FeedResponse?) -> Void) {
        
-        var params = ["filters": "post, photo"]
-        params["start_from"] = nextBatchFrom
+        var params = [ConfigKeys.filtersKey: ConfigKeys.attachmentsKey]
+        params[ConfigKeys.nextBatchKey] = nextBatchFrom
         networking.request(path: API.newsFeed, params: params) { (data, error) in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")

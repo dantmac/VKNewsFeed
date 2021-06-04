@@ -15,8 +15,7 @@ protocol NewsFeedDisplayLogic: AnyObject {
 class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCodeCellDelegate {
     
     var interactor: NewsFeedBusinessLogic?
-    var router: (NSObjectProtocol & NewsFeedRoutingLogic)?
-    
+
     private var feedViewModel = FeedViewModel.init(cells: [], footerTitle: nil)
     
     @IBOutlet weak var table: UITableView!
@@ -36,17 +35,10 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
         let viewController        = self
         let interactor            = NewsFeedInteractor()
         let presenter             = NewsFeedPresenter()
-        let router                = NewsFeedRouter()
         viewController.interactor = interactor
-        viewController.router     = router
         interactor.presenter      = presenter
         presenter.viewController  = viewController
-        router.viewController     = viewController
     }
-    
-    // MARK: Routing
-    
-    
     
     // MARK: View lifecycle
     
@@ -76,13 +68,6 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
     }
     
     private func setupTopBars() {
-        
-//        let keyWindow = UIApplication.shared.connectedScenes
-//            .filter({ $0.activationState == .foregroundActive })
-//            .map({ $0 as? UIWindowScene })
-//            .compactMap({ $0 })
-//            .first?.windows
-//            .filter({ $0.isKeyWindow }).first
         
         let keyWindow = UIApplication.shared.windows.filter { $0.isKeyWindow }.first
         

@@ -14,9 +14,15 @@ protocol AuthServiceDelegate: AnyObject {
     func authServiceSignInDidFail()
 }
 
+private enum ConfigKeys {
+    static let appId = "7863469"
+    static let scopeWall = "wall"
+    static let scopeFriends = "friends"
+}
+
 class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
    
-    private let appId = "7863469"
+    private let appId = ConfigKeys.appId
     private let vkSdk: VKSdk
     
     override init() {
@@ -38,7 +44,7 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     func wakeUpSession() {
-        let scope = ["wall","friends"]
+        let scope = [ConfigKeys.scopeWall, ConfigKeys.scopeFriends]
         VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
             switch state {
             case .initialized:

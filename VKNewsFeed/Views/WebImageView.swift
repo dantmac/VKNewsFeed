@@ -16,15 +16,13 @@ class WebImageView: UIImageView {
         currentUrlString = imageURL
         guard let imageURL = imageURL, let url = URL(string: imageURL) else {
             self.image = nil
-            return }
-        
-        if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)) {
-            self.image = UIImage(data: cachedResponse.data)
-//            print("from cache")
             return
         }
         
-//        print("from Ethernet")
+        if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)) {
+            self.image = UIImage(data: cachedResponse.data)
+            return
+        }
         
         let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             
