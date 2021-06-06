@@ -209,11 +209,11 @@ final class NewsFeedCodeCell: UITableViewCell {
         
         moreTextButton.addTarget(self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
         
-        overlayFirstLayer() // the First layer
-        overlaySecondLayer() // the Second layer
-        overlayThirdLayerOnTopView() // the Third layer on topView
-        overlayThirdLayerObBottomView() // the Third layer on bottomView
-        overlayFourthLayerOnBottomViewViews() // the Fourth layer on bottomViewViews
+        overlayFirstLayer()
+        overlaySecondLayer()
+        overlayThirdLayerOnTopView()
+        overlayThirdLayerOnBottomView()
+        overlayFourthLayerOnBottomViewViews()
     }
     
     @objc func moreTextButtonTouch() {
@@ -284,7 +284,7 @@ final class NewsFeedCodeCell: UITableViewCell {
         labelView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
-    private func overlayThirdLayerObBottomView() {
+    private func overlayThirdLayerOnBottomView() {
         bottomView.addSubview(likesView)
         bottomView.addSubview(commentsView)
         bottomView.addSubview(sharesView)

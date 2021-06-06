@@ -35,6 +35,6 @@ class GradientView: UIView {
     }
     
     private func setupGradientColors() {
-            gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
     }
 }

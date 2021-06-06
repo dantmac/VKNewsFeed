@@ -61,17 +61,17 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
         
         let sizes = cellLayoutCalculator.sizes(postText: feedItem.text, photoAttachments: photoAttachments, isFullSizedPost: isFullSized)
         
-        return FeedViewModel.Cell.init(postId: feedItem.postId,
-                                       iconUrlString: profile.photo,
-                                       name: profile.name,
-                                       date: dateTitle,
-                                       text: feedItem.text,
-                                       likes: formattedCounter(feedItem.likes?.count),
-                                       comments: formattedCounter(feedItem.comments?.count),
-                                       shares: formattedCounter(feedItem.reposts?.count),
-                                       views: formattedCounter(feedItem.views?.count),
-                                       photoAttachments: photoAttachments,
-                                       sizes: sizes)
+        return FeedViewModel.Cell(postId: feedItem.postId,
+                                  iconUrlString: profile.photo,
+                                  name: profile.name,
+                                  date: dateTitle,
+                                  text: feedItem.text,
+                                  likes: formattedCounter(feedItem.likes?.count),
+                                  comments: formattedCounter(feedItem.comments?.count),
+                                  shares: formattedCounter(feedItem.reposts?.count),
+                                  views: formattedCounter(feedItem.views?.count),
+                                  photoAttachments: photoAttachments,
+                                  sizes: sizes)
     }
     
     private func formattedCounter(_ counter: Int?) -> String? {

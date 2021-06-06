@@ -15,7 +15,7 @@ protocol NewsFeedBusinessLogic {
 class NewsFeedInteractor: NewsFeedBusinessLogic {
 
   var presenter: NewsFeedPresentationLogic?
-  var service: NewsFeedService?
+  var service: NewsFeedServiceProtocol?
    
   func makeRequest(request: NewsFeed.Model.Request.RequestType) {
     if service == nil {

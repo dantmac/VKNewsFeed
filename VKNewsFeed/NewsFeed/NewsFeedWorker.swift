@@ -8,7 +8,14 @@
 
 import UIKit
 
-class NewsFeedService {
+protocol NewsFeedServiceProtocol {
+    func getUser(completion: @escaping (UserResponse?) -> Void)
+    func getFeed(completion: @escaping ([Int], FeedResponse?) -> Void)
+    func revealPostIds(forPostId postId: Int, completion: @escaping ([Int], FeedResponse?) -> Void)
+    func getNextBatch(completion: @escaping ([Int], FeedResponse?) -> Void)
+}
+
+class NewsFeedService: NewsFeedServiceProtocol {
 
     var authService: AuthService
     var networking: Networking
@@ -76,8 +83,8 @@ class NewsFeedService {
                 self?.feedResponse?.nextFrom = feed.nextFrom
             }
             
-            guard let feedResponse = self?.feedResponse else { return }
-            completion(self!.revealedPostIds, feedResponse)
+            guard let feedResponse = self?.feedResponse, let revealedPostIds = self?.revealedPostIds else { return }
+            completion(revealedPostIds, feedResponse)
         }
     }
 }
