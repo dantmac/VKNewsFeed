@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Feed View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="NewsFeedViewController" customModule="VKNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="tkM-7S-ixY" customClass="GradientView" customModule="VKNewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="adO-ml-v0L"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="1" green="0.83125853187996324" blue="0.42277605486765851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GJE-pS-hQ4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="cLX-u8-RSl"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="yoN-9S-9Tx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="C4G-PG-KzN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GJE-pS-hQ4" secondAttribute="bottom" id="F6j-Gk-iAn"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Isf-YM-9n9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GJE-pS-hQ4" secondAttribute="trailing" id="caB-vp-Ge8"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="fFi-D8-Haf"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="gTl-pr-wle"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="omh-i0-vDf"/>
+                            <constraint firstItem="GJE-pS-hQ4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="wO1-7w-Q0F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="GJE-pS-hQ4" id="bVJ-Ve-SOY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="23.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
